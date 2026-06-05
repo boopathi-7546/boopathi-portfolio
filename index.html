@@ -5,10 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <meta name="description" content="Boopathi P — Computer and Communication Engineering student at VSB Engineering College. Aspiring Web Developer specializing in AI/ML and Full-Stack Development."/>
   <title>Boopathi P — Web Developer & AI/ML Enthusiast</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet">
-
   <style>
     :root {
       --bg: #0a0a0f;
@@ -44,85 +42,36 @@
       display: flex; align-items: center; justify-content: space-between;
       padding: 0 6vw;
     }
-
-    /* ✅ UPDATED LOGO STYLE */
     .nav-logo {
       font-family: 'Syne', sans-serif;
-      font-weight: 800;
-      font-size: 1.4rem;
-      text-decoration: none;
-      letter-spacing: 0.5px;
-
-      background: linear-gradient(
-        270deg,
-        #6c63ff,
-        #ff6584,
-        #43e8a0,
-        #6c63ff
-      );
-      background-size: 600% 600%;
-
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-
-      animation: gradientMove 6s ease infinite;
-      transition: 0.3s;
-    }
-
-    @keyframes gradientMove {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-
-    .nav-logo:hover {
-      filter: drop-shadow(0 0 10px rgba(108,99,255,0.6));
-      transform: scale(1.05);
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 2rem;
-      list-style: none;
-    }
-
-    .nav-links a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.9rem;
-      font-weight: 500;
-    }
-
-    .nav-links a:hover {
+      font-weight: 800; font-size: 1.3rem;
       color: var(--text);
+      text-decoration: none;
     }
-
-    section {
-      padding: 100px 6vw;
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      color: var(--muted); text-decoration: none;
+      font-size: 0.9rem; font-weight: 500;
+      transition: color 0.2s;
     }
+    .nav-links a:hover { color: var(--text); }
 
-    html { scroll-behavior: smooth; }
+    /* ───── SECTIONS ───── */
+    section { padding: 100px 6vw; }
+    section:first-of-type { padding-top: calc(var(--nav-h) + 80px); }
 
-  </style>
-</head>
-
-<body>
-
-<!-- NAV (ONLY THIS LINE CHANGED) -->
-<nav>
-  <a class="nav-logo" href="#home">Boopathi P</a>
-
-  <ul class="nav-links">
-    <li><a href="#home">Home</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#skills">Skills</a></li>
-    <li><a href="#internship">Internship</a></li>
-    <li><a href="#projects">Projects</a></li>
-    <li><a href="#certifications">Certifications</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-</nav>
+    .section-label {
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      color: var(--accent); margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 800; line-height: 1.15;
+      margin-bottom: 1.5rem;
+    }
 
     /* ───── HERO ───── */
     #home {
