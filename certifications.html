@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Certifications — Boopathi P</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .cert-hero {
+      padding: 5rem 5vw 3rem;
+      text-align: center;
+    }
+    .cert-hero .avail-badge { margin-bottom: 1.5rem; }
+    .cert-hero p { color: var(--muted); margin-top: 0.75rem; font-size: 0.95rem; }
+
+    .cert-section {
+      padding: 2rem 5vw 4rem;
+      max-width: 1100px; margin: auto;
+    }
+
+    /* Provider block */
+    .provider-block {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      overflow: hidden;
+      transition: border-color 0.25s;
+    }
+    .provider-block:hover { border-color: var(--gold-border); }
+
+    .provider-header {
+      display: flex; align-items: center; gap: 1rem;
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border);
+      cursor: pointer;
+    }
+    .provider-icon {
+      width: 44px; height: 44px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .provider-info { flex: 1; }
+    .provider-name { font-size: 1rem; font-weight: 600; }
+    .provider-desc { color: var(--muted); font-size: 0.8rem; margin-top: 0.15rem; }
+    .provider-count {
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-size: 0.75rem; font-weight: 700;
+      padding: 0.25rem 0.6rem; border-radius: 100px;
+    }
+
+    /* Cert items inside */
+    .cert-items { padding: 1rem 1.5rem 1.25rem; }
+    .cert-row {
+      display: flex; align-items: flex-start; gap: 0.6rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid var(--border);
+    }
+    .cert-row:last-child { border-bottom: none; }
+    .cert-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; margin-top: 0.45rem; }
+    .cert-name-text { font-size: 0.9rem; color: var(--muted2); flex: 1; }
+    .cert-badge-star {
+      font-size: 0.72rem; font-weight: 700;
+      background: var(--gold-dim); border: 1px solid var(--gold-border);
+      color: var(--gold); padding: 0.2rem 0.55rem; border-radius: 100px;
+      white-space: nowrap;
+    }
+    .cert-badge-blue {
+      font-size: 0.72rem; font-weight: 700;
+      background: rgba(59,130,246,0.1); border: 1px solid rgba(59,130,246,0.25);
+      color: #60a5fa; padding: 0.2rem 0.55rem; border-radius: 100px;
+      white-space: nowrap;
+    }
+
+    /* Stats bar */
+    .cert-stats {
+      display: flex; gap: 1.5rem; flex-wrap: wrap;
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem 2rem;
+      margin-bottom: 2rem;
+    }
+    .c-stat { text-align: center; }
+    .c-stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 800; color: var(--gold);
+    }
+    .c-stat-lbl { font-size: 0.75rem; color: var(--muted); margin-top: 0.2rem; }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Boopathi<span>P</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certifications.html" class="active">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="cert-hero fade-up d1">
+    <span class="avail-badge"><span class="avail-dot"></span>CONTINUOUS LEARNING</span>
+    <h1 class="section-title" style="margin-top:1rem;">Certifications &amp; Achievements</h1>
+    <div class="underline" style="margin:1rem auto;"></div>
+    <p>Industry-recognised credentials from leading platforms in AI, Web Dev, Python, and more.</p>
+  </div>
+
+  <div class="cert-section">
+
+    <!-- Stats -->
+    <div class="cert-stats fade-up d2">
+      <div class="c-stat">
+        <div class="c-stat-val">20+</div>
+        <div class="c-stat-lbl">Total Certifications</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat-val">6</div>
+        <div class="c-stat-lbl">Platforms</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat-val">2</div>
+        <div class="c-stat-lbl">NPTEL Elite</div>
+      </div>
+      <div class="c-stat">
+        <div class="c-stat-val">Top 1%</div>
+        <div class="c-stat-lbl">Java — IIT Kharagpur</div>
+      </div>
+    </div>
+
+    <span class="label">Credentials</span>
+    <h2 class="section-title" style="font-size:1.6rem; margin-bottom:0.4rem;">Certifications Earned</h2>
+    <div class="underline"></div>
+
+    <!-- NPTEL -->
+    <div class="provider-block fade-up d2">
+      <div class="provider-header">
+        <div class="provider-icon">🏛️</div>
+        <div class="provider-info">
+          <div class="provider-name">NPTEL — IIT Kharagpur &amp; IIT Roorkee</div>
+          <div class="provider-desc">Government of India funded online certification — Swayam platform</div>
+        </div>
+        <span class="provider-count">2 certs</span>
+      </div>
+      <div class="cert-items">
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Programming in Java</span>
+          <span class="cert-badge-star">🏆 100% · Elite + Top 1% · IIT Kharagpur</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Data Analytics with Python</span>
+          <span class="cert-badge-star">Elite · 60% · IIT Roorkee</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Infosys Springboard -->
+    <div class="provider-block fade-up d3">
+      <div class="provider-header">
+        <div class="provider-icon">🔵</div>
+        <div class="provider-info">
+          <div class="provider-name">Infosys Springboard</div>
+          <div class="provider-desc">Industry learning platform by Infosys Limited</div>
+        </div>
+        <span class="provider-count">12 certs</span>
+      </div>
+      <div class="cert-items">
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Python Foundation Certification</span>
+          <span class="cert-badge-blue">Achievement · Jul 2025</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Python Fundamentals</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Python Clean Coding</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Programming Fundamentals using Python – Part 2</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Object Oriented Programming using Python</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Database Management System Part – 1</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Database Management System Part – 2</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Introduction to NoSQL Databases</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Software Engineering and Agile Software Development</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Agile Scrum in Practice</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Email Writing Skills</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Time Management</span>
+        </div>
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">High Impact Presentations</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cisco -->
+    <div class="provider-block fade-up d4">
+      <div class="provider-header">
+        <div class="provider-icon">🌐</div>
+        <div class="provider-info">
+          <div class="provider-name">Cisco Networking Academy</div>
+          <div class="provider-desc">Global technology education &amp; networking certification provider</div>
+        </div>
+        <span class="provider-count">1 cert</span>
+      </div>
+      <div class="cert-items">
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Introduction to Internet of Things</span>
+          <span class="cert-badge-blue">Jan 25, 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NASSCOM FutureSkills Prime -->
+    <div class="provider-block fade-up d4">
+      <div class="provider-header">
+        <div class="provider-icon">🥇</div>
+        <div class="provider-info">
+          <div class="provider-name">NASSCOM FutureSkills Prime × Salesforce</div>
+          <div class="provider-desc">MeitY–NASSCOM Digital Skilling Initiative — Govt. approved curriculum</div>
+        </div>
+        <span class="provider-count">1 cert</span>
+      </div>
+      <div class="cert-items">
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Salesforce — Becoming an Agentforce Champion</span>
+          <span class="cert-badge-star">🏆 Agentblazer Champion 2025</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- NoviTech -->
+    <div class="provider-block fade-up d5">
+      <div class="provider-header">
+        <div class="provider-icon">💻</div>
+        <div class="provider-info">
+          <div class="provider-name">NoviTech R&amp;D Private Limited</div>
+          <div class="provider-desc">ISO 9001:2015 certified — Innovation Partner, Coimbatore</div>
+        </div>
+        <span class="provider-count">1 cert</span>
+      </div>
+      <div class="cert-items">
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">30 Days MasterClass in Full Stack Development</span>
+          <span class="cert-badge-blue">Dec 2025 – Jan 2026</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Agnirva -->
+    <div class="provider-block fade-up d5">
+      <div class="provider-header">
+        <div class="provider-icon">🚀</div>
+        <div class="provider-info">
+          <div class="provider-name">Agnirva.com</div>
+          <div class="provider-desc">DPIIT Recognised Startup — AI Internship Program</div>
+        </div>
+        <span class="provider-count">1 cert</span>
+      </div>
+      <div class="cert-items">
+        <div class="cert-row">
+          <span class="cert-dot"></span>
+          <span class="cert-name-text">Agnirva AI Internship Program – Summer 2025</span>
+          <span class="cert-badge-blue">May – Jul 2025</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <span class="footer-logo">Boopathi<span>P</span></span>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="social-btn" href="https://www.linkedin.com/in/boopathi-boopathi-141b3132b" target="_blank">in</a>
+      <a class="social-btn" href="https://github.com/boopathi-7546" target="_blank">gh</a>
+      <a class="social-btn" href="mailto:bb4969344@gmail.com">✉</a>
+    </div>
+    <p class="footer-copy">© 2026 Boopathi P. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>

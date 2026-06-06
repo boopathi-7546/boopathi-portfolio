@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About — Boopathi P</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .about-hero {
+      padding: 5rem 5vw 3rem;
+      text-align: center;
+    }
+    .about-hero .avail-badge { margin-bottom: 1.5rem; }
+    .about-hero .section-title { font-size: clamp(2.5rem, 5vw, 4rem); }
+    .about-sub { color: var(--muted); margin-top: 0.75rem; font-size: 0.95rem; }
+
+    /* Bio section */
+    .bio-section {
+      padding: 3rem 5vw;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 4rem; max-width: 1100px; margin: auto;
+    }
+    .bio-photo-wrap { position: relative; }
+    .bio-photo {
+      width: 100%; border-radius: 14px;
+      object-fit: cover; object-position: center top;
+      height: 360px;
+      border: 1px solid var(--border);
+      display: block;
+    }
+    .cgpa-badge {
+      position: absolute; bottom: -14px; right: -14px;
+      background: var(--gold); color: #0d0d0d;
+      border-radius: 10px;
+      padding: 0.7rem 1rem;
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+    }
+    .cgpa-badge .val { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+    .cgpa-badge .lbl { font-size: 0.68rem; font-weight: 600; margin-top: 0.1rem; }
+
+    .bio-text { padding-top: 0.5rem; }
+    .bio-text h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 800;
+      margin-bottom: 1.25rem;
+    }
+    .bio-text h2 span { color: var(--gold); }
+    .bio-text p { color: var(--muted); margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.9; }
+    .bio-text p strong { color: var(--text); }
+
+    /* Info grid */
+    .info-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1rem; margin-top: 2rem;
+    }
+    .info-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 0.9rem 1.1rem;
+    }
+    .info-key {
+      font-size: 0.68rem; letter-spacing: 0.15em;
+      text-transform: uppercase; color: var(--muted);
+      font-weight: 600; margin-bottom: 0.3rem;
+    }
+    .info-val { font-size: 0.9rem; font-weight: 500; color: var(--text); }
+
+    /* Interests */
+    .interests-section {
+      padding: 2rem 5vw 0;
+      max-width: 1100px; margin: auto;
+    }
+    .interests-section h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700;
+      margin-bottom: 1rem;
+    }
+    .interest-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* Education */
+    .edu-section {
+      padding: 4rem 5vw;
+      max-width: 1100px; margin: auto;
+    }
+    .edu-timeline { margin-top: 0; }
+    .edu-item {
+      display: grid; grid-template-columns: auto 1fr;
+      gap: 1.5rem; margin-bottom: 1.5rem;
+      align-items: start;
+    }
+    .edu-icon {
+      width: 44px; height: 44px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: 10px;
+      display: flex; align-items: center;
+      justify-content: center;
+      font-size: 1.1rem; flex-shrink: 0;
+    }
+    .edu-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .edu-card:hover { border-color: var(--gold-border); }
+    .edu-card h4 { font-size: 1rem; font-weight: 600; margin-bottom: 0.2rem; }
+    .edu-card .edu-inst { color: var(--muted); font-size: 0.85rem; margin-bottom: 0.6rem; }
+    .edu-meta { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; }
+    .edu-year { font-size: 0.78rem; color: var(--muted); }
+    .edu-score {
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      color: var(--gold);
+      font-size: 0.78rem; font-weight: 700;
+      padding: 0.25rem 0.65rem; border-radius: 100px;
+    }
+
+    @media (max-width: 768px) {
+      .bio-section { grid-template-columns: 1fr; }
+      .bio-photo-wrap { max-width: 280px; margin: auto; }
+      .info-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Boopathi<span>P</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <!-- Hero -->
+  <div class="about-hero fade-up d1">
+    <span class="avail-badge"><span class="avail-dot"></span>GET TO KNOW ME</span>
+    <h1 class="section-title" style="margin-top:1rem;">About Me</h1>
+    <div class="underline" style="margin:1rem auto;"></div>
+    <p class="about-sub">Passionate learner, aspiring engineer, and technology enthusiast from Erode, Tamil Nadu.</p>
+  </div>
+
+  <!-- Bio -->
+  <div class="bio-section">
+    <div class="bio-photo-wrap fade-up d2">
+      <img class="bio-photo" src="boopathi2.jpeg" alt="Boopathi P"/>
+      <div class="cgpa-badge">
+        <div class="val">8.28</div>
+        <div class="lbl">CGPA / 10</div>
+      </div>
+    </div>
+
+    <div class="bio-text fade-up d3">
+      <span class="label">Biography</span>
+      <h2>Hello, I'm <span>Boopathi P</span></h2>
+
+      <p>I am a passionate <strong>Computer and Communication Engineering</strong> student at V.S.B Engineering College, Karur, Tamil Nadu, currently in my 3rd year of B.E with a CGPA of 8.28.</p>
+
+      <p>My journey in technology is driven by a deep curiosity about how intelligent systems work and how they can be applied to solve meaningful real-world problems. I am highly interested in <strong>Web Development, AI/ML, Data Science,</strong> and <strong>Generative AI</strong>.</p>
+
+      <p>Through internships, certifications, and projects, I strive to sharpen my technical and problem-solving abilities every day. I believe in <em>learning by building</em> — every project is a new opportunity to grow.</p>
+
+      <p>My goal is to become a skilled Software Engineer who creates impactful technology solutions for real-world challenges.</p>
+
+      <div class="info-grid">
+        <div class="info-item">
+          <div class="info-key">Full Name</div>
+          <div class="info-val">Boopathi P</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">Location</div>
+          <div class="info-val">Ganapathipalayam, Erode, Tamil Nadu</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">Phone</div>
+          <div class="info-val">+91 93607 56622</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">Email</div>
+          <div class="info-val">bb4969344@gmail.com</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">College</div>
+          <div class="info-val">V.S.B Engineering College, Karur</div>
+        </div>
+        <div class="info-item">
+          <div class="info-key">Status</div>
+          <div class="info-val">3rd Year B.E Student</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Interests -->
+  <div class="interests-section fade-up d4">
+    <h3>Interests</h3>
+    <div class="interest-tags">
+      <span class="tag tag-gold">Web Development</span>
+      <span class="tag tag-gold">Artificial Intelligence</span>
+      <span class="tag tag-gold">Machine Learning</span>
+      <span class="tag tag-gold">Generative AI</span>
+      <span class="tag tag-gold">Data Science</span>
+      <span class="tag">Logic Puzzles</span>
+      <span class="tag">Tamil Literature</span>
+      <span class="tag">Problem Solving</span>
+      <span class="tag">Open Source</span>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="edu-section fade-up d5">
+    <span class="label">Academic Journey</span>
+    <h2 class="section-title">Education</h2>
+    <div class="underline"></div>
+
+    <div class="edu-timeline">
+      <div class="edu-item">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-card">
+          <h4>B.E – Computer and Communication Engineering</h4>
+          <div class="edu-inst">V.S.B Engineering College, Karur, Tamil Nadu</div>
+          <div class="edu-meta">
+            <span class="edu-year">2024 – 2028 · Currently 3rd Year</span>
+            <span class="edu-score">CGPA: 8.28</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-icon">📚</div>
+        <div class="edu-card">
+          <h4>Higher Secondary (11th & 12th) — State Board</h4>
+          <div class="edu-inst">Government Higher Secondary School</div>
+          <div class="edu-meta">
+            <span class="edu-year">Jun 2022 – Jun 2024</span>
+            <span class="edu-score">81%</span>
+          </div>
+        </div>
+      </div>
+      <div class="edu-item">
+        <div class="edu-icon">📖</div>
+        <div class="edu-card">
+          <h4>Secondary (10th)</h4>
+          <div class="edu-inst">Kongu Matric Higher Secondary School</div>
+          <div class="edu-meta">
+            <span class="edu-year">Jun 2021 – Jun 2022</span>
+            <span class="edu-score">87%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">Boopathi<span>P</span></span>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="social-btn" href="https://www.linkedin.com/in/boopathi-boopathi-141b3132b" target="_blank">in</a>
+      <a class="social-btn" href="https://github.com/boopathi-7546" target="_blank">gh</a>
+      <a class="social-btn" href="mailto:bb4969344@gmail.com">✉</a>
+    </div>
+    <p class="footer-copy">© 2026 Boopathi P. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>

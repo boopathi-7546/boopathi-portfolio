@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Skills — Boopathi P</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .skills-hero {
+      padding: 5rem 5vw 3rem;
+      text-align: center;
+    }
+    .skills-hero .avail-badge { margin-bottom: 1.5rem; }
+    .skills-hero .section-title { font-size: clamp(2.2rem, 5vw, 3.8rem); }
+    .skills-hero .about-sub { color: var(--muted); margin-top: 0.75rem; font-size: 0.95rem; }
+
+    .skills-section {
+      padding: 2rem 5vw 4rem;
+      max-width: 1100px; margin: auto;
+    }
+
+    /* Core competencies grid */
+    .competency-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; margin-bottom: 3rem;
+    }
+    .comp-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.5rem;
+      transition: border-color 0.25s;
+    }
+    .comp-card:hover { border-color: var(--gold-border); }
+    .comp-header {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+    .comp-icon {
+      width: 38px; height: 38px;
+      background: var(--gold-dim);
+      border: 1px solid var(--gold-border);
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1rem;
+    }
+    .comp-title { font-size: 0.95rem; font-weight: 600; }
+
+    /* Progress bars */
+    .skill-row { margin-bottom: 1rem; }
+    .skill-row:last-child { margin-bottom: 0; }
+    .skill-info {
+      display: flex; justify-content: space-between;
+      margin-bottom: 0.35rem;
+    }
+    .skill-name { font-size: 0.85rem; color: var(--muted2); }
+    .skill-pct { font-size: 0.82rem; color: var(--gold); font-weight: 600; }
+    .bar-bg {
+      height: 4px; background: var(--border2);
+      border-radius: 100px; overflow: hidden;
+    }
+    .bar-fill {
+      height: 100%; border-radius: 100px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+      width: 0;
+      transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* Tools card (tag-based, no progress bar) */
+    .tools-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    /* Soft skills */
+    .soft-section { margin-top: 1rem; }
+    .soft-grid {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 0.75rem; margin-top: 1.5rem;
+    }
+    .soft-item {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.85rem 1.1rem;
+      display: flex; align-items: center; gap: 0.65rem;
+      font-size: 0.88rem; color: var(--muted2);
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .soft-item:hover { border-color: var(--gold-border); color: var(--text); }
+    .soft-dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--gold); flex-shrink: 0;
+    }
+
+    @media (max-width: 768px) {
+      .competency-grid { grid-template-columns: 1fr; }
+      .soft-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Boopathi<span>P</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html" class="active">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="skills-hero fade-up d1">
+    <span class="avail-badge"><span class="avail-dot"></span>TECHNICAL EXPERTISE</span>
+    <h1 class="section-title" style="margin-top:1rem;">Skills &amp; Technologies</h1>
+    <div class="underline" style="margin:1rem auto;"></div>
+    <p class="about-sub">A growing toolkit across web development, AI/ML, programming, and developer tools.</p>
+  </div>
+
+  <div class="skills-section">
+    <span class="label">Core Competencies</span>
+    <h2 class="section-title" style="font-size:1.6rem; margin-bottom:0.4rem;">Technical Skills</h2>
+    <div class="underline"></div>
+
+    <div class="competency-grid">
+
+      <!-- Programming Languages -->
+      <div class="comp-card fade-up d2">
+        <div class="comp-header">
+          <div class="comp-icon">⌨️</div>
+          <div class="comp-title">Programming Languages</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">Python</span><span class="skill-pct">80%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="80"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">Java</span><span class="skill-pct">85%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">C</span><span class="skill-pct">70%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="70"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">SQL</span><span class="skill-pct">65%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="65"></div></div>
+        </div>
+      </div>
+
+      <!-- Web Development -->
+      <div class="comp-card fade-up d3">
+        <div class="comp-header">
+          <div class="comp-icon">🌐</div>
+          <div class="comp-title">Web Development</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">HTML5</span><span class="skill-pct">90%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="90"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">CSS3</span><span class="skill-pct">85%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="85"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">JavaScript (DOM)</span><span class="skill-pct">75%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="75"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">Responsive Design</span><span class="skill-pct">80%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="80"></div></div>
+        </div>
+      </div>
+
+      <!-- AI / ML -->
+      <div class="comp-card fade-up d4">
+        <div class="comp-header">
+          <div class="comp-icon">🤖</div>
+          <div class="comp-title">AI &amp; Machine Learning</div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">Machine Learning</span><span class="skill-pct">70%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="70"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">NLP</span><span class="skill-pct">68%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="68"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">Generative AI</span><span class="skill-pct">75%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="75"></div></div>
+        </div>
+        <div class="skill-row">
+          <div class="skill-info"><span class="skill-name">Prompt Engineering</span><span class="skill-pct">80%</span></div>
+          <div class="bar-bg"><div class="bar-fill" data-w="80"></div></div>
+        </div>
+      </div>
+
+      <!-- Tools & Platforms -->
+      <div class="comp-card fade-up d5">
+        <div class="comp-header">
+          <div class="comp-icon">🛠️</div>
+          <div class="comp-title">Tools, Database &amp; Platforms</div>
+        </div>
+        <div class="tools-tags">
+          <span class="tag">Git</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">VS Code</span>
+          <span class="tag">Canva</span>
+          <span class="tag">Tkinter</span>
+          <span class="tag">NoSQL</span>
+          <span class="tag">DBMS</span>
+          <span class="tag">Agile / Scrum</span>
+          <span class="tag">OOP</span>
+          <span class="tag">DSA</span>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="soft-section fade-up d5">
+      <span class="label">Professional Qualities</span>
+      <h2 class="section-title" style="font-size:1.6rem; margin-bottom:0.4rem;">Soft Skills</h2>
+      <div class="underline"></div>
+      <div class="soft-grid">
+        <div class="soft-item"><span class="soft-dot"></span>Problem Solving</div>
+        <div class="soft-item"><span class="soft-dot"></span>Adaptability</div>
+        <div class="soft-item"><span class="soft-dot"></span>Time Management</div>
+        <div class="soft-item"><span class="soft-dot"></span>Team Collaboration</div>
+        <div class="soft-item"><span class="soft-dot"></span>Email Writing</div>
+        <div class="soft-item"><span class="soft-dot"></span>High Impact Presentations</div>
+        <div class="soft-item"><span class="soft-dot"></span>Continuous Learning</div>
+        <div class="soft-item"><span class="soft-dot"></span>Attention to Detail</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">Boopathi<span>P</span></span>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="social-btn" href="https://www.linkedin.com/in/boopathi-boopathi-141b3132b" target="_blank">in</a>
+      <a class="social-btn" href="https://github.com/boopathi-7546" target="_blank">gh</a>
+      <a class="social-btn" href="mailto:bb4969344@gmail.com">✉</a>
+    </div>
+    <p class="footer-copy">© 2026 Boopathi P. All rights reserved.</p>
+  </footer>
+</div>
+
+<script>
+  // Animate progress bars on load
+  window.addEventListener('load', () => {
+    document.querySelectorAll('.bar-fill').forEach(bar => {
+      const w = bar.getAttribute('data-w');
+      setTimeout(() => { bar.style.width = w + '%'; }, 300);
+    });
+  });
+</script>
+</body>
+</html>

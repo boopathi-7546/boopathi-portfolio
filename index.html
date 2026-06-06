@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Boopathi P — Portfolio</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* ── HERO ── */
+    .hero {
+      min-height: calc(100vh - var(--nav-h));
+      display: flex; align-items: center;
+      padding: 5vw;
+      position: relative; overflow: hidden;
+    }
+    .hero-inner {
+      max-width: 1100px; margin: auto;
+      display: grid; grid-template-columns: 1fr 420px;
+      gap: 5rem; align-items: center; width: 100%;
+    }
+    .hero-eyebrow {
+      display: flex; align-items: center; gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-line { width: 40px; height: 1px; background: var(--gold); }
+    .hero-eyebrow-text {
+      font-size: 0.75rem; letter-spacing: 0.2em;
+      text-transform: uppercase; color: var(--gold);
+      font-weight: 600;
+    }
+    .hero-name {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(3rem, 6vw, 5.5rem);
+      font-weight: 800; line-height: 1.0;
+      margin-bottom: 0.25rem;
+    }
+    .hero-name .gold { color: var(--gold); }
+    .hero-role {
+      font-size: 1.05rem; color: var(--muted2);
+      margin-bottom: 1.5rem;
+      font-weight: 400;
+    }
+    .hero-desc {
+      color: var(--muted); max-width: 480px;
+      margin-bottom: 2.5rem; font-size: 0.95rem;
+      line-height: 1.8;
+    }
+    .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 3rem; }
+
+    .hero-stats {
+      display: flex; gap: 2.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; font-weight: 800;
+      color: var(--text); line-height: 1;
+    }
+    .stat-val span { color: var(--gold); }
+    .stat-lbl { font-size: 0.75rem; color: var(--muted); margin-top: 0.3rem; letter-spacing: 0.05em; }
+
+    /* Photo side */
+    .hero-photo-side { position: relative; }
+    .photo-frame {
+      position: relative; display: inline-block;
+    }
+    .photo-frame img {
+      width: 100%; max-width: 380px;
+      height: 460px; object-fit: cover;
+      object-position: center top;
+      border-radius: 16px;
+      display: block;
+      filter: grayscale(10%);
+    }
+    .photo-frame::before {
+      content: '';
+      position: absolute;
+      top: -12px; left: -12px; right: 12px; bottom: 12px;
+      border: 1.5px solid var(--gold-border);
+      border-radius: 16px;
+      z-index: -1;
+    }
+    .photo-badge {
+      position: absolute;
+      bottom: 20px; left: -20px;
+      background: var(--card);
+      border: 1px solid var(--border2);
+      border-radius: 10px;
+      padding: 0.85rem 1.1rem;
+    }
+    .photo-badge .pb-val {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem; font-weight: 800;
+      color: var(--gold); line-height: 1;
+    }
+    .photo-badge .pb-lbl {
+      font-size: 0.72rem; color: var(--muted); margin-top: 0.2rem;
+    }
+
+    /* BG deco */
+    .bg-deco {
+      position: absolute; pointer-events: none; z-index: -1;
+    }
+    .deco-circle {
+      width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+      top: -100px; right: -100px;
+    }
+    .deco-grid {
+      opacity: 0.03;
+      background-image:
+        linear-gradient(var(--text) 1px, transparent 1px),
+        linear-gradient(90deg, var(--text) 1px, transparent 1px);
+      background-size: 40px 40px;
+      inset: 0;
+    }
+
+    /* scroll indicator */
+    .scroll-hint {
+      position: absolute; bottom: 2rem; left: 50%;
+      transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center;
+      gap: 0.4rem; color: var(--muted); font-size: 0.72rem;
+      letter-spacing: 0.1em; text-transform: uppercase;
+      animation: fadeUp 1s ease 0.8s both;
+    }
+    .scroll-arrow {
+      width: 1px; height: 40px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-photo-side { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="index.html">Boopathi<span>P</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html">Projects</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="page">
+  <section class="hero">
+    <div class="bg-deco deco-grid"></div>
+    <div class="bg-deco deco-circle"></div>
+
+    <div class="hero-inner">
+      <!-- Left -->
+      <div>
+        <div class="hero-eyebrow fade-up d1">
+          <div class="hero-line"></div>
+          <span class="hero-eyebrow-text">Computer & Communication Engineering</span>
+        </div>
+
+        <h1 class="hero-name fade-up d2">
+          Hello, I'm<br><span class="gold">Boopathi P</span>
+        </h1>
+        <p class="hero-role fade-up d3">Aspiring Web Developer &amp; AI/ML Enthusiast</p>
+
+        <p class="hero-desc fade-up d4">
+          B.E student at V.S.B Engineering College, Karur. Currently interning as a
+          Web Developer at <strong style="color:var(--text)">Thiranex</strong>.
+          Passionate about building scalable web apps and exploring AI/ML.
+        </p>
+
+        <div class="hero-btns fade-up d5">
+          <a href="projects.html" class="btn btn-gold">View My Work</a>
+          <a href="contact.html" class="btn btn-outline">Get In Touch</a>
+        </div>
+
+        <div class="hero-stats fade-up d6">
+          <div>
+            <div class="stat-val">8.28<span>★</span></div>
+            <div class="stat-lbl">CGPA</div>
+          </div>
+          <div>
+            <div class="stat-val">3<span>+</span></div>
+            <div class="stat-lbl">Projects</div>
+          </div>
+          <div>
+            <div class="stat-val">20<span>+</span></div>
+            <div class="stat-lbl">Certifications</div>
+          </div>
+          <div>
+            <div class="stat-val">2</div>
+            <div class="stat-lbl">Internships</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Photo -->
+      <div class="hero-photo-side fade-up d3">
+        <div class="photo-frame">
+          <img src="boopathi.jpeg" alt="Boopathi P"/>
+          <div class="photo-badge">
+            <div class="pb-val">8.28</div>
+            <div class="pb-lbl">CGPA / 10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span class="footer-logo">Boopathi<span>P</span></span>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="social-btn" href="https://www.linkedin.com/in/boopathi-boopathi-141b3132b" target="_blank">in</a>
+      <a class="social-btn" href="https://github.com/boopathi-7546" target="_blank">gh</a>
+      <a class="social-btn" href="mailto:bb4969344@gmail.com">✉</a>
+    </div>
+    <p class="footer-copy">© 2026 Boopathi P. All rights reserved.</p>
+  </footer>
+</div>
+
+</body>
+</html>

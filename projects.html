@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projects — Boopathi P</title>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    .proj-hero {
+      padding: 5rem 5vw 3rem;
+      text-align: center;
+    }
+    .proj-hero .avail-badge { margin-bottom: 1.5rem; }
+    .proj-hero p { color: var(--muted); margin-top: 0.75rem; font-size: 0.95rem; }
+
+    .proj-section {
+      padding: 2rem 5vw 4rem;
+      max-width: 1100px; margin: auto;
+    }
+
+    /* Featured / Internship project */
+    .featured-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      transition: border-color 0.25s;
+      position: relative; overflow: hidden;
+    }
+    .featured-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold2));
+    }
+    .featured-card:hover { border-color: var(--gold-border); }
+    .feat-badge {
+      display: inline-flex; align-items: center; gap: 0.4rem;
+      font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 0.75rem;
+    }
+    .feat-badge span { color: var(--muted); }
+    .featured-card h3 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.4rem; font-weight: 700; margin-bottom: 0.75rem;
+    }
+    .featured-card p { color: var(--muted); font-size: 0.9rem; line-height: 1.8; margin-bottom: 1.25rem; }
+    .feat-highlights { display: flex; flex-direction: column; gap: 0.75rem; }
+    .feat-item {
+      display: flex; align-items: flex-start; gap: 0.75rem;
+      background: var(--card2); border: 1px solid var(--border);
+      border-radius: 10px; padding: 0.75rem 1rem;
+    }
+    .feat-item-icon { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
+    .feat-item-title { font-size: 0.88rem; font-weight: 600; }
+    .feat-item-sub { font-size: 0.78rem; color: var(--muted); margin-top: 0.1rem; }
+
+    /* Projects grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.25rem;
+    }
+    .proj-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px; padding: 1.75rem;
+      transition: border-color 0.25s, transform 0.25s;
+    }
+    .proj-card:hover { border-color: var(--gold-border); transform: translateY(-4px); }
+    .proj-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.2rem; font-weight: 800;
+      color: var(--border2); line-height: 1; margin-bottom: 0.75rem;
+    }
+    .proj-card h3 { font-size: 1.05rem; font-weight: 700; margin-bottom: 0.5rem; }
+    .proj-card p { color: var(--muted); font-size: 0.875rem; line-height: 1.75; margin-bottom: 1.1rem; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+
+    /* GitHub CTA */
+    .github-cta {
+      text-align: center; margin-top: 3rem;
+      padding: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .github-cta p { color: var(--muted); font-size: 0.85rem; margin-bottom: 1rem; }
+
+    @media (max-width: 768px) {
+      .featured-card { grid-template-columns: 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html">Boopathi<span>P</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="projects.html" class="active">Projects</a></li>
+    <li><a href="certifications.html">Certifications</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</nav>
+
+<div class="page">
+  <div class="proj-hero fade-up d1">
+    <span class="avail-badge"><span class="avail-dot"></span>WHAT I'VE BUILT</span>
+    <h1 class="section-title" style="margin-top:1rem;">Projects</h1>
+    <div class="underline" style="margin:1rem auto;"></div>
+    <p>Real-world applications powered by AI, machine learning, NLP, and web technologies.</p>
+  </div>
+
+  <div class="proj-section">
+    <span class="label">Portfolio</span>
+    <h2 class="section-title" style="font-size:1.6rem; margin-bottom:0.4rem;">Featured Work</h2>
+    <div class="underline"></div>
+
+    <!-- Featured: AI Scam Detector -->
+    <div class="featured-card fade-up d2">
+      <div>
+        <div class="feat-badge">⭐ FEATURED PROJECT</div>
+        <h3>AI Scam Detector</h3>
+        <p>
+          An intelligent system to detect fraudulent messages using NLP-based text analysis and pattern recognition.
+          Implements preprocessing techniques — tokenization, stop-word removal, and filtering — to identify scam indicators
+          with classification logic for improved accuracy.
+        </p>
+        <div class="proj-tags">
+          <span class="tag tag-gold">Python</span>
+          <span class="tag tag-gold">NLP</span>
+          <span class="tag tag-gold">Machine Learning</span>
+          <span class="tag">Cybersecurity</span>
+          <span class="tag">Text Classification</span>
+        </div>
+      </div>
+      <div class="feat-highlights">
+        <div class="feat-item">
+          <div class="feat-item-icon">🔍</div>
+          <div>
+            <div class="feat-item-title">NLP Text Analysis</div>
+            <div class="feat-item-sub">Tokenization & stop-word removal</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-item-icon">🛡️</div>
+          <div>
+            <div class="feat-item-title">Pattern Recognition</div>
+            <div class="feat-item-sub">Scam indicator identification</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-item-icon">🎯</div>
+          <div>
+            <div class="feat-item-title">Classification Logic</div>
+            <div class="feat-item-sub">Improved detection accuracy</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-item-icon">🤖</div>
+          <div>
+            <div class="feat-item-title">AI in Cybersecurity</div>
+            <div class="feat-item-sub">Practical AI application</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Projects Grid -->
+    <div class="projects-grid">
+      <div class="proj-card fade-up d3">
+        <div class="proj-num">01</div>
+        <h3>To-Do List App</h3>
+        <p>Desktop GUI application to manage daily tasks with add, delete, and update functionality. Built with an intuitive Tkinter interface for smooth user interaction.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span>
+          <span class="tag">Tkinter</span>
+          <span class="tag">GUI</span>
+          <span class="tag">Desktop App</span>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up d4">
+        <div class="proj-num">02</div>
+        <h3>CLI Expense Tracker</h3>
+        <p>Command-line tool to log, categorize, and track personal expenses with persistent file-based data storage across sessions. Demonstrates practical Python problem-solving.</p>
+        <div class="proj-tags">
+          <span class="tag">Python</span>
+          <span class="tag">CLI</span>
+          <span class="tag">File Handling</span>
+        </div>
+      </div>
+
+      <div class="proj-card fade-up d5">
+        <div class="proj-num">03</div>
+        <h3>Portfolio Website</h3>
+        <p>Multi-page personal portfolio website built with pure HTML, CSS, and JavaScript. Features dark gold theme, responsive design, and smooth animations. Deployed on GitHub Pages.</p>
+        <div class="proj-tags">
+          <span class="tag tag-gold">HTML</span>
+          <span class="tag tag-gold">CSS</span>
+          <span class="tag tag-gold">JavaScript</span>
+          <span class="tag">GitHub Pages</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- GitHub CTA -->
+    <div class="github-cta fade-up d6">
+      <p>MORE WORK &amp; OPEN-SOURCE CONTRIBUTIONS</p>
+      <a href="https://github.com/boopathi-7546" target="_blank" class="btn btn-outline">
+        Visit GitHub Profile →
+      </a>
+    </div>
+  </div>
+
+  <footer>
+    <span class="footer-logo">Boopathi<span>P</span></span>
+    <ul class="footer-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="skills.html">Skills</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="certifications.html">Certifications</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="footer-socials">
+      <a class="social-btn" href="https://www.linkedin.com/in/boopathi-boopathi-141b3132b" target="_blank">in</a>
+      <a class="social-btn" href="https://github.com/boopathi-7546" target="_blank">gh</a>
+      <a class="social-btn" href="mailto:bb4969344@gmail.com">✉</a>
+    </div>
+    <p class="footer-copy">© 2026 Boopathi P. All rights reserved.</p>
+  </footer>
+</div>
+</body>
+</html>
