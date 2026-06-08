@@ -10,14 +10,19 @@
     .hero {
       min-height: calc(100vh - var(--nav-h));
       display: flex; align-items: center;
+      justify-content: center;
       padding: 5vw;
       position: relative; overflow: hidden;
     }
     .hero-inner {
-      max-width: 1100px; margin: auto;
-      display: grid; grid-template-columns: 1fr 420px;
-      gap: 3rem; align-items: center; width: 100%;
-    }
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 360px;
+    gap: 2rem;
+    align-items: center;
+    width: 100%;
+}
     .hero-eyebrow {
       display: flex; align-items: center; gap: 0.75rem;
       margin-bottom: 1.5rem;
@@ -67,8 +72,14 @@
       position: relative; display: inline-block;
     }
     .photo-frame img {
-    max-width: 340px;
+    width: 100%;
+    max-width: 320px;
     height: 420px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 16px;
+    display: block;
+    filter: grayscale(10%);
 }
     .photo-frame::before {
       content: '';
